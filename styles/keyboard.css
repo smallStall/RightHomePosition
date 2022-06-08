@@ -1,0 +1,222 @@
+#__remix {
+  display: grid;
+  justify-items: center;
+  row-gap: 50px;
+  margin: 0;
+}
+
+#word {
+  font-size: 4em;
+  font-weight: bold;
+  color: #444;
+  text-align: center;
+}
+
+#roma {
+  font-size: 3em;
+  font-weight: bold;
+  color: #444;
+  text-align: center;
+}
+
+a {
+  color: #444;
+}
+
+.typing-p {
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.6em;
+}
+
+.just-pos {
+  animation: blinkUnderbar 0.5s infinite alternate;
+  text-underline-offset: 6px;
+  content:  "";
+}
+
+.yet-pos {
+  color: hsl(0, 0%, 75%);
+}
+
+@keyframes blinkUnderbar {
+  0% {
+    text-decoration: none;
+  }
+  100% {
+    text-decoration: underline;
+  }
+}
+
+.done {
+  color: #888;
+}
+
+.input {
+  background-color: black;
+  color: white;
+}
+
+.keyboardBase {
+  max-width: 950px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(31, 24px);
+  grid-template-rows: repeat(5, 55px);
+  grid-gap: 8px;
+  border-bottom: 4px solid hsl(0, 0%, 70%);
+  border-right: 4px solid hsl(0, 0%, 70%);
+  border-top: 1px solid hsl(0, 0%, 70%);
+  border-left: 1px solid hsl(0, 0%, 70%);
+}
+
+section {
+  line-height: 1.8em;
+}
+
+.details-section {
+  display: grid;
+  row-gap: 30px;
+  margin-top: 100px;
+  max-width: 650px;
+  border-radius: 20px;
+  padding: 75px 100px 75px 100px;
+  border-bottom: 4px solid hsl(0, 0%, 70%);
+  border-right: 4px solid hsl(0, 0%, 70%);
+  border-top: 1px solid hsl(0, 0%, 70%);
+  border-left: 1px solid hsl(0, 0%, 70%);
+}
+
+.keyboardBase * {
+  /* border: 2px solid black; */
+  border-radius: 30px;
+  grid-column: span 2;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 16px;
+  border-bottom: 2px solid hsl(0, 0%, 70%);
+  border-right: 2px solid hsl(0, 0%, 70%);
+  border-top: 1px solid hsl(0, 0%, 70%);
+  border-left: 1px solid hsl(0, 0%, 70%);
+}
+
+.keyHome {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.key-pressed {
+  background-color: rgb(70, 70, 70);
+  color: rgb(243, 243, 243);
+}
+
+.key:hover {
+  background-color: rgb(70, 70, 70);
+  color: rgb(243, 243, 243);
+}
+
+.next-key {
+  background-color: hsl(200, 100%, 80%);
+}
+
+.delete {
+  grid-column: span 4;
+}
+
+.tab {
+  grid-column: span 3;
+}
+
+.backslash {
+  grid-column: span 3;
+}
+
+.capslock {
+  grid-column: span 4;
+}
+
+.half {
+  grid-column: span 1;
+  visibility: hidden;
+}
+
+.enter {
+  grid-column: span 2;
+  grid-row: span 2;
+  position: relative;
+  color: transparent;
+}
+
+.enter::after {
+  content: "enter";
+  color: black;
+  background-color: white;
+  position: absolute;
+  width: 31px;
+  height: 23px;
+  left: -1px;
+  top: -1px;
+  line-height: 55px;
+  border-top: 1px solid hsl(0, 0%, 70%);
+}
+
+.enter::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 30px;
+  height: 55px;
+  left: -31px;
+  border-radius: 30px 0 0 30px;
+  border-left: 1px solid hsl(0, 0%, 70%);
+  border-top: 1px solid hsl(0, 0%, 70%);
+  border-bottom: 2px solid hsl(0, 0%, 70%);
+  top: -1px;
+}
+
+.left-shift {
+  grid-column: span 5;
+}
+
+.right-shift {
+  grid-column: span 3;
+}
+
+.command {
+  grid-column: span 3;
+  font-size: 14px;
+}
+
+.space {
+  grid-column: span 7;
+  color: transparent;
+}
+
+.hankaku {
+  font-size: 15px;
+}
+
+.non-convert {
+  font-size: 15px;
+}
+
+.convert {
+  font-size: 15px;
+}
+
+.hiragana {
+  font-size: 15px;
+  width: 30px;
+  padding: 0 11px 0 14px;
+}
+
+.header-section {
+  width: 100%;
+  border-bottom: 1px solid hsl(0, 0%, 70%);
+  text-align: center;
+}
