@@ -1,0 +1,144 @@
+{
+:applications {:vscode ["^com\\.microsoft\\.VSCode$"]}  
+:main [{:des "cabocha"
+:rules [
+  ;;親指の設定
+  ;;dual-roleキー（他のキーと組み合わせたときと単独で押したときとで別なキー出力になる）設定になっています
+  [:##return_or_enter :left_command nil {:alone :f13}],
+  [:##japanese_eisuu :left_shift nil {:alone :return_or_enter}],
+  [:##spacebar :!CTOleft_shift nil {:alone :spacebar}], ;hyperキー/spaceキー
+  [:##right_option :left_shift nil {:alone :delete_or_backspace}],
+  [:##japanese_kana :!CTOleft_shift nil {:alone :spacebar}], ;hyperキー/spaceキー
+  [:##right_command :left_shift nil {:alone :delete_or_backspace}],
+  [:##left_shift :left_shift nil {:alone :!Sslash}],
+
+  ;;controlとcommandの入れ替え
+  [:##left_control :left_command],
+
+  ;;左手オモテ面の設定
+  [:caps_lock :!S2],
+  [:q :j],
+  [:e :n],
+  [:t :d],  
+  [:a :h],
+  [:d :c],
+  [:f :t],
+  [:x :p],
+  [:c :y],
+  [:v :m],
+
+  ;;右手オモテ面の設定
+  [:6 :5],
+  [:7 :6],
+  [:8 :7],
+  [:9 :8],
+  [:0 :9],
+  [:hyphen :0],
+  [:i :q],
+  [:o :v],
+  [:p :u],
+  [:open_bracket :k],
+  [:close_bracket :quote],
+  [:k :x],
+  [:l :a],
+  [:semicolon :e],
+  [:quote :i],
+  [:non_us_pound :l],
+  [:m :hyphen],
+  [:comma :f],
+  [:period :o],
+  [:slash :comma],
+  [:international1 :period],
+  [:right_shift :slash],
+  
+  ;;左手シフト面の設定
+  [:!Sq :!Sj],
+  [:!Se :!Sn],
+  [:!St :!Sd],  
+  [:!Scaps_lock :!Sequal_sign],
+  [:!Sa :!Sh],
+  [:!Sd :!Sc],
+  [:!Sf :!St],
+  [:!Sx :!Sp],
+  [:!Sc :!Sy],
+  [:!Sv :!Sm],
+
+  ;;右手シフト面の設定
+  [:!S6 :!S5],
+  [:!S7 :!S6],
+  [:!S8 :!S7],
+  [:!S9 :!S8],
+  [:!S0 :!S9],
+  [:!Shyphen :!S0],
+
+  [:!Si :!Sq],
+  [:!So :!Sv],
+  [:!Sp :!Su],
+  [:!Sopen_bracket :!Sk],
+  [:!Sclose_bracket :!Squote],
+  [:!Sk :!Sx],
+  [:!Sl :!Sa],
+  [:!Ssemicolon :!Se],
+  [:!Squote :!Si],
+  [:!Snon_us_pound :!Sl],
+  [:!Sm :!Shyphen],
+  [:!Scomma :!Sf],
+  [:!Speriod :!So],
+  [:!Sslash :!Scomma],
+  [:!Sinternational1 :!Speriod],
+  [:!Sright_shift :!Sslash],
+
+  ;;左手ハイパー面の設定
+  [:!!q :open_bracket],
+  [:!!w :!Sinternational3],
+  [:!!e :semicolon],
+  [:!!r :!Sclose_bracket],
+  [:!!t :!Sbackslash],
+  [:!!caps_lock :!Sopen_bracket],
+  [:!!a :!S7],
+  [:!!s :!Sinternational1],
+  [:!!d :!Shyphen],
+  [:!!f :!S8],
+  [:!!g :!S9],
+  [:!!z :!Ssemicolon],
+  [:!!x :!Squote],
+  [:!!c :international3],
+  [:!!v :close_bracket],
+  [:!!b :backslash],
+
+  ;;右手ハイパー面の設定
+  [:!!i :!CStab],
+  [:!!o :!COleft_arrow],
+  [:!!p :!Ctab],
+  [:!!open_bracket :!COright_arrow],
+  [:!!close_bracket :!Cw],
+
+  [:!!k :left_arrow],
+  [:!!l :down_arrow],
+  [:!!semicolon :up_arrow],
+  [:!!quote :right_arrow],
+  [:!!non_us_pound :f12],
+
+
+  [:!!comma :!Cleft_arrow],
+  [:!!period :page_down],
+  [:!!slash :page_up],
+  [:!!international1 :!Cright_arrow],
+
+  ;;command面
+  [:!Ccaps_lock :!C2],
+
+  ;;functionの設定
+  [:page_up :f11],
+  [:page_down :f12],
+  [:f21 :f7],
+  [:!OSs :f8],
+
+  ;;vs codeでの設定
+  [:mute :f2 :vscode],
+  [:volume_decrement :return_or_enter :vscode],
+  [:volume_increment :f4 :vscode],
+  [:home :f9 :vscode],
+  [:end :f10 :vscode],
+  [:escape [:k :i :l :l :a :l :l :spacebar :n :o :d :e :return_or_enter] :vscode]
+]}]}
